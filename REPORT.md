@@ -39,8 +39,8 @@
 ```mermaid
 flowchart LR
   subgraph clients [Клиенты]
-    CLI[CLI / скрипты]
-    Web[Web UI (опционально)]
+    CLI[CLI и скрипты]
+    Web[Web UI]
     Pipeline[ML Pipeline]
   end
 
@@ -50,8 +50,8 @@ flowchart LR
   end
 
   subgraph storage [Хранилище артефактов]
-    FS[Файловая система (по умолчанию)]
-    S3[S3-совместимое (будущее)]
+    FS[Файловая система]
+    S3[S3-совместимое]
   end
 
   CLI --> API
