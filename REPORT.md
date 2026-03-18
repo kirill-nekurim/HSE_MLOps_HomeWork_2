@@ -36,32 +36,6 @@
 
 ## 3. Архитектура
 
-```mermaid
-flowchart LR
-  subgraph clients [Клиенты]
-    CLI[CLI и скрипты]
-    Web[Web UI]
-    Pipeline[ML Pipeline]
-  end
-
-  subgraph registry [Model Registry]
-    API[REST API]
-    DB[(База данных)]
-  end
-
-  subgraph storage [Хранилище артефактов]
-    FS[Файловая система]
-    S3[S3-совместимое]
-  end
-
-  CLI --> API
-  Web --> API
-  Pipeline --> API
-  API --> DB
-  API --> FS
-  API --> S3
-```
-
 ![Архитектура системы](docs/model-registry-architecture.png)
 
 ### Обоснование компонентов и технологий
